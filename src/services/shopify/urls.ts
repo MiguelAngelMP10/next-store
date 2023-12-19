@@ -5,6 +5,7 @@ export const shopifyUrls = {
     'all': `${env.SHOPIFY_HOSTNAME}/admin/api/2023-07/products.json`
   },
   collections: {
-    'all': `${env.SHOPIFY_HOSTNAME}/admin/api/2023-07/smart_collections.json`
+    'all': `${env.SHOPIFY_HOSTNAME}/admin/api/2023-07/smart_collections.json`,
+    'products': (id: string) => `${env.SHOPIFY_HOSTNAME}/admin/api/2023-07/collections/${id}/products.json`
   }
 }
