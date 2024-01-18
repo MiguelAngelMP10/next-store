@@ -1,10 +1,11 @@
 import Link from "next/link";
-import styles from "./Header.module.css";
+import styles from './Header.module.sass'
+import { ShoppingCart } from '../ShoppingCart'
 
 export const Header = () => {
   console.log("Hola mundo header");
   return (
-    <header>
+    <header className={styles.Header}>
       <nav>
         <ul className={styles.Header__list}>
           <Link href="/">
@@ -15,6 +16,9 @@ export const Header = () => {
           </Link>
         </ul>
       </nav>
+      <div className={styles.Header__user}>
+        <ShoppingCart />
+      </div>
     </header>
   );
 };
